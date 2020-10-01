@@ -2,25 +2,6 @@ version: '3.1'
 
 services:
 
-  wordpress:
-    image: wordpress:php7.4
-    restart: always
-    ports:
-      - 8080:80
-    environment:
-      - WORDPRESS_DB_HOST=db
-      - WORDPRESS_DB_USER=wordpressuser
-      - WORDPRESS_DB_PASSWORD=password
-      - WORDPRESS_DB_NAME=wordpress
-  db:
-    image: mariadb
-    restart: always
-    environment:
-      - MYSQL_ROOT_PASSWORD=teamonerootpw
-      - MYSQL_PASSWORD=password
-      - MYSQL_DATABASE=wordpress
-      - MYSQL_USER=wordpressuser
-
   gitea:
     image: gitea/gitea:1.12.4
     environment:
