@@ -22,7 +22,3 @@ services:
       - MYSQL_PASSWORD=password
       - MYSQL_DATABASE=wordpress
       - MYSQL_USER=wordpressuser
-
-#volumes:
-#  wordpress:
-#  db:
