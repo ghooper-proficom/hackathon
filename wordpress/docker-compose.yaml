@@ -1,6 +1,8 @@
 version: '3.1'
+
 services:
   wordpress:
+    container_name: wp
     image: wordpress:php7.4
     restart: always
     ports:
@@ -12,6 +14,7 @@ services:
       - WORDPRESS_DB_NAME=wordpress
 
   db:
+    container_name: wp-db
     image: mariadb
     restart: always
     environment:
@@ -19,3 +22,7 @@ services:
       - MYSQL_PASSWORD=password
       - MYSQL_DATABASE=wordpress
       - MYSQL_USER=wordpressuser
+
+#volumes:
+#  wordpress:
+#  db:

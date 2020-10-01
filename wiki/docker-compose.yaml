@@ -1,0 +1,8 @@
+version: '3.1'
+
+services:
+  mediawiki:
+    image: mediawiki
+    restart: always
+    ports:
+      - 8082:80

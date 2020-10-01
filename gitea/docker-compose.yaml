@@ -1,7 +1,6 @@
 version: '3.1'
 
 services:
-
   gitea:
     image: gitea/gitea:1.12.4
     environment:
@@ -18,20 +17,3 @@ services:
     depends_on:
       - db
     restart: always
-
-  nextcloud:
-    image: nextcloud
-    ports:
-      - 8081:80
-    restart: always
-
-  mediawiki:
-    image: mediawiki
-    restart: always
-    ports:
-      - 8082:80
-
-volumes:
-  wordpress:
-  db:
-  nextcloud:
